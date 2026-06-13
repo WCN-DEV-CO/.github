@@ -15,6 +15,7 @@ Small, sharp, dependency-light tools extracted from the systems we build in-hous
 | **[glbforge](https://github.com/WCN-DEV-CO/glbforge)** | A tiny, pure-stdlib GLB / glTF 2.0 writer for Python. Zero dependencies. |
 | **[tierbroker](https://github.com/WCN-DEV-CO/tierbroker)** | Fair job scheduling + automatic failover across many providers, with per-provider rate limits & quotas. |
 | **[aoi-grid](https://github.com/WCN-DEV-CO/aoi-grid)** | A spatial hash grid for Area-of-Interest / nearest-neighbor queries. 2D & 3D. |
+| **[retry-jitter](https://github.com/WCN-DEV-CO/retry-jitter)** | A tiny retry decorator with exponential backoff + jitter. Sync & async. Zero dependencies. |
 
 *More on the way. Everything here is real, tested, and honest about what it does.*
 
@@ -40,3 +41,4 @@ We're open to **partnerships, integrations, talent, collaborations, and B2B rela
 ---
 
 *WCN Development Co, LLC — building the future, sharing the toolkit.*
+
