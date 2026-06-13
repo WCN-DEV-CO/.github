@@ -1,46 +1,31 @@
-# WCN Development Co, LLC
+# WCN Development Co
 
-**We build large-scale systems — and open-source the useful pieces.**
+Small, sharp, **zero-dependency** building blocks for resilient distributed systems —
+plus a few open-core engines. Every repo is original, MIT-licensed, and tested.
 
-WCN is an engineering company building AI-native software, tooling, and infrastructure at serious scale. We believe the best way to earn trust is to show our work: when we build something genuinely useful that doesn't give away the farm, we share it — cleanly, openly, MIT-licensed, doing exactly what it says.
-
----
-
-## 🔧 Open Source
-
-Small, sharp, dependency-light tools extracted from the systems we build in-house. Each does one thing well.
-
-| Project | What it does |
+## Resilience & concurrency toolkit
+| Repo | What it does |
 |---|---|
-| **[glbforge](https://github.com/WCN-DEV-CO/glbforge)** | A tiny, pure-stdlib GLB / glTF 2.0 writer for Python. Zero dependencies. |
-| **[tierbroker](https://github.com/WCN-DEV-CO/tierbroker)** | Fair job scheduling + automatic failover across many providers, with per-provider rate limits & quotas. |
-| **[aoi-grid](https://github.com/WCN-DEV-CO/aoi-grid)** | A spatial hash grid for Area-of-Interest / nearest-neighbor queries. 2D & 3D. |
-| **[retry-jitter](https://github.com/WCN-DEV-CO/retry-jitter)** | A tiny retry decorator with exponential backoff + jitter. Sync & async. Zero dependencies. |
-| **[circuitring](https://github.com/WCN-DEV-CO/circuitring)** | A tiny circuit breaker — fail fast when a dependency is down, auto-recover. Sync & async. Zero dependencies. |
+| **circuitring** | Circuit breaker — stop hammering a failing dependency |
+| **retry-jitter** | Retry with exponential backoff + jitter |
+| **token-bucket** | Token-bucket rate limiter |
+| **dead-letter** | Dead-letter queue for un-processable messages |
+| **idempotency-key** | Idempotency keys — make retried operations safe |
+| **singleflight** | Collapse concurrent duplicate calls into one |
+| **ttl-cache** | Thread-safe cache with per-entry TTL + LRU |
+| **tierbroker** | Tiered work routing / admission control |
+| **aoi-grid** | Area-of-interest spatial grid (game netcode) |
+| **glbforge** | Pure-Python GLB (glTF binary) writer |
 
-*More on the way. Everything here is real, tested, and honest about what it does.*
+## Open-core engines
+| Repo | What it does | Extend via |
+|---|---|---|
+| **wcn-flux** | Backpressure-aware dataflow runtime | Scheduler / Router seams |
+| **wcn-statedb** | Versioned append-only state store (time-travel, replay) | SyncBackend seam |
+| **wcn-mesh** | Typed actor runtime (supervision, at-least-once) | Supervisor / Resolver seams |
 
----
+**Open the engine, bring your own brain.** Each engine ships solid defaults and clean
+extension seams — plug in your own scheduling, routing, sync, or supervision policy
+without forking.
 
-## 🧭 How we work
-
-- **Transparent by default.** Our public code does exactly what it says — no hidden behavior, no surprises. Ever.
-- **Useful first.** We only publish things that genuinely help people build better.
-- **We give back.** The tools that hardened our own products are yours to use, fork, and improve.
-
----
-
-## 🤝 Working with us
-
-Building something in this space? We'd genuinely like to hear from you.
-
-We're open to **partnerships, integrations, talent, collaborations, and B2B relationships** — anything mutually beneficial. If our work resonates with what you're building, reach out. The right relationships tend to start with shared respect for good engineering.
-
-- 💬 Open an issue on any repo tagged `partnership`
-- 📨 Or contact us directly — we read everything
-
----
-
-*WCN Development Co, LLC — building the future, sharing the toolkit.*
-
-
+*Zero dependencies. MIT. Built by WCN Development Co.*
